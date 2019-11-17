@@ -1,7 +1,25 @@
-<div class="container">
-<h3>ホーム画面</h3>
 
-<a href="https://twitter.com/fukuchankamo" class="btn btn-primary">福ちゃんのTwitter</a>
-<a href="/new" class="btn btn-primary">新規メモ作成</a>
+
+
+
+
+<div class="container">
+  <h3>ホーム画面</h3>
+
+
+
+
+    <% @memos.each do |memo| %>
+      <div class = "col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading">　<%= memo.title %> </div>
+          <div class="panel-body">
+            <%= memo.body %>
+          </div>
+        </div>
+    </div>
+
+    <% end %>
+
 
 </div>
