@@ -12,4 +12,15 @@ class MemosController < ApplicationController
     Memo.create(title:params["memos"]["title"],body:params["memos"]["body"])
     redirect_to "/"
   end
+
+  def edit
+
+  end
+
+
+  def destroy
+    memo = Memo.find(params["id"])
+    memo.destroy
+    redirect_to"/"
+  end
 end
