@@ -14,7 +14,15 @@ class MemosController < ApplicationController
   end
 
   def edit
+    @memo = Memo.find(params["id"])
+  end
 
+  def update
+    memo = Memo.find(params["id"])
+    memo.title = params["memos"]["title"]
+    memo.body = params["memos"]["body"]
+    memo.save
+    redirect_to"/"
   end
 
 

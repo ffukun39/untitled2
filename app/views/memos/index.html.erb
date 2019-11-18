@@ -3,7 +3,14 @@
     <% @memos.each do |memo| %>
       <div class = "col-sm-4">
         <div class="panel panel-success">
-          <div class="panel-heading">　<%= memo.title %> <a href="/memos/<%=memo.id%>" data-method="delete">削除</a></div>
+            <div class="panel-heading">
+              <h4><%= memo.title %></h4>
+              <p>カテゴリ未設定</p>
+                 <div class="buttons">
+                    <a href="/memos/<%=memo.id%>" data-method="delete"><span class="glyphicon glyphicon-trash"></span></a>
+                    <a href="/memos/<%=memo.id%>/edit" ><span class="glyphicon glyphicon-edit"</a>
+                 </div>
+            </div>
           <div class="panel-body">
             <%= memo.body %>
           </div>
