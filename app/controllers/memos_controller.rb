@@ -5,6 +5,7 @@ class MemosController < ApplicationController
   end
   def new
     #新規作成ページのときのアクション
+    @categories = Category.all
   end
 
   def create
