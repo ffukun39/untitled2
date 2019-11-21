@@ -1,13 +1,13 @@
 
   <p>新規メモ作成</p>
-    <%= form_tag("/create") do %>
-      <div class="form-group">
-        <%= label_tag "form_title", "Title" %>
-        <%= text_field :memos,:title, id:"form_title" , class:"form-control", placeholder: "title"%>
-      </div>
-      <div class="form-group">
-        <%= label_tag "form_content", "Cnotent" %>
-        <%= text_field :memos,:body, id:"form-content" , class:"form-control", placeholder: "content"%>
-      </div>
-        <%=submit_tag "Create", class: "btn btn-primary" %>
-    <% end %>
+  <%= form_tag("/create") do %>
+    <div class="form-group">
+      <%= label_tag "form_title", "Title" %>
+      <%= text_field :memos,:title, id:"form_title" , class:"form-control", placeholder: "title"%>
+    </div>
+    <div class="form-group">
+      <%= label_tag "form_content", "Cnotent" %>
+      <%= text_field :memos,:body, id:"form-content" , class:"form-control", placeholder: "content"%>
+    </div>
+    <%=submit_tag "Create", class: "btn btn-primary" %>
+  <% end %>
