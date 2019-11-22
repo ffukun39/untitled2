@@ -18,12 +18,6 @@ ActiveRecord::Schema.define(version: 2019_11_20_093315) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "categoruys", force: :cascade do |t|
-    t.integer "categorie"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "memos", force: :cascade do |t|
     t.string "title"
     t.string "body"
